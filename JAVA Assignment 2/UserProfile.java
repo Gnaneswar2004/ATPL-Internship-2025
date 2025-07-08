@@ -14,7 +14,7 @@ public class UserProfile
         this.username = username;
     }
 
-    public String getemai()
+    public String getemail()
     {
         return email;
     }
