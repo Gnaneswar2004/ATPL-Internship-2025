@@ -10,7 +10,7 @@ public class ThrowingException1
         }
         else 
         {
-            System.out.println("Your are eligible for Aadhar Services.");
+            System.out.println("Your are eligible for Aadhaar Services.");
         }
     }
     public static void main(String[] args) 

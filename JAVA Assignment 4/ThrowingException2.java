@@ -24,7 +24,7 @@ public class ThrowingException2
         }
         catch (IOException e) 
         {
-            System.out.println("IOException." + e.getMessage());
+            System.err.println("IOException.");
         }
     }
 }

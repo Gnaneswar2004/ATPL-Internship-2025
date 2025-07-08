@@ -45,7 +45,7 @@ public class ClassifyExceptions
         } 
         catch (IOException e) 
         {
-            System.out.println("IOException: " + e.getMessage());
+            System.err.println("IOException: " + e.getMessage());
         }
 
         try
@@ -54,7 +54,7 @@ public class ClassifyExceptions
         } 
         catch (FileNotFoundException e) 
         {
-            System.out.println("FileNotFoundException: " + e.getMessage());
+            System.err.println("FileNotFoundException: " + e.getMessage());
         }
 
         try 
@@ -63,7 +63,7 @@ public class ClassifyExceptions
         } 
         catch (SQLException e) 
         {
-            System.out.println("SQLException: " + e.getMessage());
+            System.err.println("SQLException: " + e.getMessage());
         }
 
         try 
@@ -71,7 +71,7 @@ public class ClassifyExceptions
             triggerNullPointer();
         } catch (NullPointerException e) 
         {
-            System.out.println("NullPointerException: " + e.getMessage());
+            System.err.println("NullPointerException: " + e.getMessage());
         }
 
         try 
@@ -79,7 +79,7 @@ public class ClassifyExceptions
             divideByZero();
         } catch (ArithmeticException e) 
         {
-            System.out.println("ArithmeticException: " + e.getMessage());
+            System.err.println("ArithmeticException: " + e.getMessage());
         }
     }
 }
