@@ -1,23 +1,20 @@
 import java.util.*;
 
-public class LinkedListExample 
-{
-    public static void main(String[] args) 
-    {
-        LinkedList <Integer> list = new LinkedList<>();
-        Scanner s = new Scanner(System.in);
+public class LinkedListExample {
+    public static void main(String[] args) {
+        LinkedList <Integer> linkedList = new LinkedList<>();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the Elements of LinkedList :");
 
-        for(int i=0; i<5; i++)
-        {
-            list.add(s.nextInt());
+        for(int length=0; length<5; length++) {
+            linkedList.add(scanner.nextInt());
         }
 
-        System.out.println(list);
-        list.addFirst(5);
-        list.addLast(60);
-        list.remove(2);
-        System.out.println(list);
+        System.out.println(linkedList);
+        linkedList.addFirst(5);
+        linkedList.addLast(60);
+        linkedList.remove(2);
+        System.out.println(linkedList);
     }
 }

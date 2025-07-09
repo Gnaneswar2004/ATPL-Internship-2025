@@ -1,32 +1,31 @@
 import java.util.*;
 
-public class ArrayListExample 
-{
-    public static void main(String[] args) 
-    {
-        ArrayList<String> arr = new ArrayList<>();
-        Scanner s = new Scanner(System.in);
+public class ArrayListExample {
+    public static void main(String[] args) {
+        ArrayList<String> arraylist = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the Elements of ArrayList :");
 
-        for (int i=0; i<5; i++)
-        {
-            arr.add(s.nextLine());
+        for (int length=0; length<5; length++) {
+            arraylist.add(scanner.nextLine());
         }
 
         System.out.println("The Elements in ArrayList are :(Using For Loop)");
-        for (int j=0; j<5; j++)
-        {
-            System.out.print(arr.get(j) + " ");
+
+        for (int length=0; length<5; length++) {
+            System.out.print(arraylist.get(length) + " ");
         }
+
         System.out.println();
         System.out.println("The Elements in ArrayList are :(Using Enhanced For Loop)");
-        for (String element : arr)
-        {
+        
+        for (String element : arraylist) {
             System.out.print(element + " ");
         }
+
         System.out.println();
-        arr.remove(2);
-        System.out.print("The ArrayList after removing 3rd element" + arr);
+        arraylist.remove(2);
+        System.out.print("The ArrayList after removing 3rd element" + arraylist);
     }
 }

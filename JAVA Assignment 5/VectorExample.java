@@ -1,24 +1,20 @@
 import java.util.*;
 
-public class VectorExample 
-{
-    public static void main(String[] args) 
-    {
-        Vector <Double> v = new Vector<>();
-        Scanner s = new Scanner(System.in);
+public class VectorExample {
+    public static void main(String[] args) {
+        Vector <Double> vector = new Vector<>();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Enter the Elements of Vetor :");
 
-        for(int i=0; i<4; i++)
-        {
-            v.add(s.nextDouble());
+        for(int length=0; length<4; length++) {
+            vector.add(scanner.nextDouble());
         }
-        System.out.println(v);
+        System.out.println(vector);
 
-        Enumeration<Double> e = v.elements();
-        while (e.hasMoreElements()) 
-        {
-            System.out.print(e.nextElement());    
+        Enumeration<Double> enumeration = vector.elements();
+        while (enumeration.hasMoreElements()) {
+            System.out.print(enumeration.nextElement());    
         }
     }
 }
