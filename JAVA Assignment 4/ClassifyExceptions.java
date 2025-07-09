@@ -2,84 +2,68 @@ import java.io.*;
 import java.util.*;
 import java.sql.SQLException;
 
-public class ClassifyExceptions
-{
-    public static void readFile(String filename) throws IOException 
-    {
-        BufferedReader reader1 = new BufferedReader(new FileReader(filename));
-        System.out.println(reader1.readLine());
+public class ClassifyExceptions {
+    public static void readFile(String filename) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(filename));
+        System.out.println(bufferedReader.readLine());
     }
 
-    public static void readFiles(String filename) throws FileNotFoundException 
-    {
-        File reader2 = new File(filename);
-        Scanner s = new Scanner(reader2);
-        while (s.hasNextLine())
-        {
-            String line = s.nextLine();
+    public static void readFiles(String filename) throws FileNotFoundException {
+        File file = new File(filename);
+        Scanner scanner = new Scanner(file);
+        while (scanner.hasNextLine()) {
+            String line = scanner.nextLine();
             System.out.println(line);
         }
     }
 
-    public static void connectToDatabase() throws SQLException 
-    {
+    public static void connectToDatabase() throws SQLException {
         throw new SQLException("Database connection failed!");
     }
 
-    public static void triggerNullPointer() 
-    {
+    public static void triggerNullPointer() {
         String text = null;
         System.out.println(text.length());
     }
 
-    public static void divideByZero() 
-    {
+    public static void divideByZero() {
         int x = 10 / 0; 
     }
 
-    public static void main(String[] args) 
-    {
-        try
-        {
+    public static void main(String[] args) {
+        try {
             readFile("Aaslins.txt");
         } 
-        catch (IOException e) 
-        {
-            System.err.println("IOException: " + e.getMessage());
+        catch (IOException ioException) {
+            System.err.println("IOException: " + ioException.getMessage());
         }
 
-        try
-        {
+        try {
             readFiles("aaslins.txt");
         } 
-        catch (FileNotFoundException e) 
-        {
-            System.err.println("FileNotFoundException: " + e.getMessage());
+        catch (FileNotFoundException fileNotFoundException) {
+            System.err.println("FileNotFoundException: " + fileNotFoundException.getMessage());
         }
 
-        try 
-        {
+        try {
             connectToDatabase(); 
         } 
-        catch (SQLException e) 
-        {
-            System.err.println("SQLException: " + e.getMessage());
+        catch (SQLException sqlException) {
+            System.err.println("SQLException: " + sqlException.getMessage());
         }
 
-        try 
-        {
+        try {
             triggerNullPointer();
-        } catch (NullPointerException e) 
-        {
-            System.err.println("NullPointerException: " + e.getMessage());
+        } 
+        catch (NullPointerException nullPointerException) {
+            System.err.println("NullPointerException: " + nullPointerException.getMessage());
         }
 
-        try 
-        {
+        try {
             divideByZero();
-        } catch (ArithmeticException e) 
-        {
-            System.err.println("ArithmeticException: " + e.getMessage());
+        } 
+        catch (ArithmeticException arithmeticException) {
+            System.err.println("ArithmeticException: " + arithmeticException.getMessage());
         }
     }
 }

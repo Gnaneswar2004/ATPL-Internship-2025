@@ -1,29 +1,23 @@
 import java.util.*;
 import java.io.*;
 
-public class ThrowingException2 
-{
-    public static void readFile (String filename) throws IOException
-    {
-        BufferedReader reader = new BufferedReader(new FileReader(filename));
+public class ThrowingException2 {
+    public static void readFile (String filename) throws IOException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(filename));
         String line;
 
-        while ((line = reader.readLine()) != null) 
-        {
+        while ((line = bufferedReader.readLine()) != null) {
             System.out.println(line);
         }
     }
-    public static void main(String[] args) 
-    {
-        Scanner s = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the file name : ");
-        String name = s.nextLine();
-        try 
-        {
+        String name = scanner.nextLine();
+        try {
             readFile(name);
         }
-        catch (IOException e) 
-        {
+        catch (IOException ioException) {
             System.err.println("IOException.");
         }
     }

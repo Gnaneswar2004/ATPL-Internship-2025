@@ -1,34 +1,28 @@
 import java.io.*;
 import java.util.*;
 
-public class CheckedExceptions 
-{
-    public static void loadFile(String filename)
-    {
-        FileInputStream file = null;
-        try 
-        {
-            file = new FileInputStream(filename);
-            System.out.println("File loaded successfully: " + filename);
-            file.close();
+public class CheckedExceptions {
+    public static void loadFile(String fileName) {
+        FileInputStream fileInputStream = null;
+        try {
+            fileInputStream = new FileInputStream(fileName);
+            System.out.println("File loaded successfully: " + fileName);
+            fileInputStream.close();
         }
-        catch (FileNotFoundException e) 
-        {
-            System.err.println("Error: File not found: " + filename);
-            e.printStackTrace(); 
+        catch (FileNotFoundException fileNotFoundException) {
+            System.err.println("Error: File not found: " + fileName);
+            fileNotFoundException.printStackTrace(); 
         } 
-        catch (IOException e) 
-        {
-            System.err.println("Error reading file: " + filename);
-            e.printStackTrace(); 
+        catch (IOException ioException) {
+            System.err.println("Error reading file: " + fileName);
+            ioException.printStackTrace(); 
         } 
     }
-    public static void main(String[] args) 
-    {
-        Scanner s = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the File Name : ");
-        String name = s.nextLine();
+        String fileName = scanner.nextLine();
 
-        loadFile(name);
+        loadFile(fileName);
     }
 }
