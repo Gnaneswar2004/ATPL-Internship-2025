@@ -1,19 +1,17 @@
 import java.util.Scanner;
 
-public class StringComparisons 
-{
-    public static void main(String[] args) 
-    {
-    Scanner s = new Scanner(System.in);
+public class StringComparisons {
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     System.out.print("Enter first string: ");
-    String s1 = s.nextLine();
+    String string1 = scanner.nextLine();
 
     System.out.print("Enter second string: ");
-    String s2 = s.nextLine();
+    String string2 = scanner.nextLine();
     
     System.out.println();
-    System.out.println("equals(): " + s1.equals(s2));
-    System.out.println("equalsIgnoreCase(): " + s1.equalsIgnoreCase(s2));
-    System.out.println("compareTo(): " + s1.compareTo(s2));
+    System.out.println("equals(): " + string1.equals(string2));
+    System.out.println("equalsIgnoreCase(): " + string1.equalsIgnoreCase(string2));
+    System.out.println("compareTo(): " + string1.compareTo(string2));
     }
 }

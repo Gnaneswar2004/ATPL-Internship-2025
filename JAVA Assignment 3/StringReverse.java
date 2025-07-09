@@ -1,23 +1,20 @@
 import java.util.Scanner;
 
-public class StringReverse
-{
-    public static void main(String[] args)
-    {
-        Scanner s = new Scanner(System.in);
+public class StringReverse {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a string : ");
-        String input = s.nextLine();
+        String input = scanner.nextLine();
         String reversed1 = "";
-        for (int i = input.length() - 1; i >= 0; i--)
-        {
-            reversed1 += input.charAt(i);
+        for (int length = input.length() - 1; length >= 0; length--) {
+            reversed1 += input.charAt(length);
         }
         System.out.println("Reversed using loop : " + reversed1);
-        StringBuilder sb1 = new StringBuilder(input);
-        String reversed2 = sb1.reverse().toString();
+        StringBuilder stringBuilder1 = new StringBuilder(input);
+        String reversed2 = stringBuilder1.reverse().toString();
         System.out.println("Reversed using StringBuilder : " + reversed2);
-        StringBuffer sb2 = new StringBuffer(input);
-        String reversed3 = sb2.reverse().toString();
+        StringBuffer stringBuilder2 = new StringBuffer(input);
+        String reversed3 = stringBuilder2.reverse().toString();
         System.out.println("Reversed using StringBuffer : " + reversed3);
     }
 }

@@ -1,7 +1,5 @@
-public class SentenceAnalysis
-{
-    public static void main(String[] args)
-    {
+public class SentenceAnalysis {
+    public static void main(String[] args) {
         String sentence = "Learning Java is fun and interesting";
 
         String[] words = sentence.split(" ");

@@ -1,12 +1,10 @@
 import java.util.Scanner;
 
-public class StringSafety
-{
-    public static void main(String[] args)
-    {
-        Scanner s = new Scanner(System.in);
+public class StringSafety {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
         System.out.print("Enter your password: ");
-        String password = s.nextLine();
+        String password = scanner.nextLine();
 
         String encrypted = encryptPassword(password);
         
@@ -14,8 +12,8 @@ public class StringSafety
         System.out.println("Encrypted Password: " + encrypted);
     }
 
-    public static String encryptPassword(String pass)
+    public static String encryptPassword(String passwordString)
     {
-        return new StringBuilder(pass).reverse().toString();
+        return new StringBuilder(passwordString).reverse().toString();
     }
 }
