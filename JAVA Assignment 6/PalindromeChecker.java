@@ -23,7 +23,7 @@ public class PalindromeChecker {
             }
         }
 
-        if (isPalindrome){
+        if (isPalindrome) {
             System.out.println("The given Word is Palindrome.");
         }
         else {

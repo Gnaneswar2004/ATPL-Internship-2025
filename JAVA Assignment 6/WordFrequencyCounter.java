@@ -13,6 +13,6 @@ public class WordFrequencyCounter {
             wordFrequency.put(word, wordFrequency.getOrDefault(word, 0) + 1);
         }
 
-        wordFrequency.forEach((word, frequency) -> System.out.println("Word: " + word + ", Frequency: " + frequency));
+        wordFrequency.forEach((word, frequency) -> System.out.println("Word : " + word + ", Frequency : " + frequency));
     }
 }
