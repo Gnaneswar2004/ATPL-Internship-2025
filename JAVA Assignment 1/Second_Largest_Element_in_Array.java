@@ -12,6 +12,6 @@ public class Second_Largest_Element_in_Array {
 			array [i] = s.nextInt();
 		}
 		Arrays.sort(array);
-		System.out.println(array[len-25]);
+		System.out.println(array[len-2]);
 	}
 }
