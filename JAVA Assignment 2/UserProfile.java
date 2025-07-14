@@ -48,6 +48,6 @@ public class UserProfile
         user.setemail("gnani@email.com");
         user.setpassword("gnani");
 
-        System.out.println("User Name is : " + user.getusername() + " the eamil of user is : " + user.getemai() + "and the password of user is : " + user.getpassword());
+        System.out.println("User Name is : " + user.getusername() + " the eamil of user is : " + user.getemail() + "and the password of user is : " + user.getpassword());
     }
 }
