@@ -41,7 +41,6 @@ public class BankATM {
         Scanner scanner = new Scanner(System.in);
         BankATM bankATM = new BankATM();
         boolean running = true;
-
         while (running) {
             System.out.println("\nATM Menu:");
             System.out.println("1. Deposit");
@@ -49,17 +48,15 @@ public class BankATM {
             System.out.println("3. Check Balance");
             System.out.println("4. Exit");
             System.out.print("Choose an option: ");
-
             int choice = scanner.nextInt();
-
             switch (choice) {
                 case 1:
-                    System.out.print("Enter deposit amount: ");
+                    System.out.print("Enter deposit amount : ");
                     double depositAmount = scanner.nextDouble();
                     bankATM.deposit(depositAmount);
                     break;
                 case 2:
-                    System.out.print("Enter withdrawal amount: ");
+                    System.out.print("Enter withdrawal amount : ");
                     double withdrawAmount = scanner.nextDouble();
                     try {
                         bankATM.withdraw(withdrawAmount);
@@ -69,11 +66,11 @@ public class BankATM {
                     }
                     break;
                 case 3:
-                    System.out.println("Current balance: " + bankATM.getBalance());
+                    System.out.println("Current balance is : " + bankATM.getBalance());
                     break;
                 case 4:
                     running = false;
-                    System.out.println("Exiting the ATM...");
+                    System.out.println("Exiting the ATM.");
                     break;
                 default:
                     System.out.println("Invalid option! Please try again.");
