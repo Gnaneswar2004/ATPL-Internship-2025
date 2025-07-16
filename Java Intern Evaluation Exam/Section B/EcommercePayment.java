@@ -1,6 +1,7 @@
 interface Payment {
     void pay();
 }
+
 class UPIPayment implements Payment {
 
     @Override
@@ -24,7 +25,9 @@ class CashOnDelivery implements Payment {
         System.out.println("Payment using Cash.");
     }
 }
+
 public class EcommercePayment {
+    
     public static void main(String[] args) {
         Payment upi = new UPIPayment();
         Payment card = new CardPayment();
