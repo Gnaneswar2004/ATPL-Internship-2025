@@ -24,7 +24,7 @@ public class CharacterFrequency {
                     count++;
                 }
             }
-            System.out.println(arr[i] + " " + count);
+            System.out.println(arr[i] + " : " + count);
         }
     }
 }
