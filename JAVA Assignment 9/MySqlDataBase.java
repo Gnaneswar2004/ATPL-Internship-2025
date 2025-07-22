@@ -19,8 +19,8 @@ public class MySqlDataBase {
             System.out.println("-------------------------------------");
 
             while (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                String name = resultSet.getString("name");
+                int id = resultSet.getInt("product_id");
+                String name = resultSet.getString("product_name");
                 float price = resultSet.getFloat("price");
 
                 System.out.format("| %-5s | %-15s | %-5s |\n",id, name, price);

@@ -13,7 +13,7 @@ public class InsertData {
         try {
             Connection connection = DriverManager.getConnection(url, username, password);
             PreparedStatement preparedStatement = connection.prepareStatement(insert);
-            preparedStatement.setInt(1,24);
+            preparedStatement.setInt(1,104);
             preparedStatement.setString(2,"Hemanth");
             preparedStatement.setString(3,"hemanth@gmail.com");
             preparedStatement.executeUpdate();
