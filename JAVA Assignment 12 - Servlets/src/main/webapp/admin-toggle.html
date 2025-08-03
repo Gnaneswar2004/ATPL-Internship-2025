@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Admin : Toggle User Active Status</title>
+</head>
+<body>
+	<form action = "admin/toggle" method = "post">
+		<label>Enter Admin ID :</label>
+		<input type = "number" name = "userId" required><br>
+		<label>Set Active :</label>
+		<select id="is_active" name="is_active" required>
+            <option value="true" selected>Active</option>
+            <option value="false">Inactive</option>
+        </select>
+		<input type = "Submit">
+	</form>
+</body>
+</html>

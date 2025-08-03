@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Store User Info</title>
+</head>
+<body>
+	<form action = "admin/store-info" method = "post">
+		<label>Enter User ID :</label>
+		<input type = "number" name = "userId" required><br>
+		<label>Enter User Name :</label>
+		<input type = "text" name = "userName" required><br>
+		<label>Enter User Email :</label>
+		<input type = "text" name = "userEmail" required><br>
+		<label>Enter User Role : </label>
+		<input type = "text" name = "userRole" required><br>
+		<label>Is Active :</label>
+		<select id="is_active" name="is_active" required>
+            <option value="true" selected>Active</option>
+            <option value="false">Inactive</option>
+        </select>
+		<input type = "Submit">
+	</form>
+</body>
+</html>

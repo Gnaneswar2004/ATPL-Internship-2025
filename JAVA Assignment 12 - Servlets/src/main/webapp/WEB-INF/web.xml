@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+	<servlet>
+		<servlet-name>UserInfoServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.UserInfoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>UserInfoServlet</servlet-name>
+		<url-pattern>/user/info</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>StoreUserInfoServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.StoreUserInfoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>StoreUserInfoServlet</servlet-name>
+		<url-pattern>/user/store-info</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AllUsersInfoServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.AllUsersInfoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AllUsersInfoServlet</servlet-name>
+		<url-pattern>/user/all-users-info</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminUserInfoServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.AdminUserInfoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AdminUserInfoServlet</servlet-name>
+		<url-pattern>/admin/user-info</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>AdminStoreUserServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.AdminStoreUserServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AdminStoreUserServlet</servlet-name>
+		<url-pattern>/admin/store-info</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminToggleActiveServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.AdminToggleActiveServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AdminToggleActiveServlet</servlet-name>
+		<url-pattern>/admin/toggle</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AdminDeleteUserServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.AdminDeleteUserServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AdminDeleteUserServlet</servlet-name>
+		<url-pattern>/admin/delete-user</url-pattern>
+	</servlet-mapping>
+	
+<servlet>
+		<servlet-name>AdminActiveUsersInfoServlet</servlet-name>
+		<servlet-class>com.aaslin.servlets.AdminActiveUsersInfoServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>AdminActiveUsersInfoServlet</servlet-name>
+		<url-pattern>/admin/active-users</url-pattern>
+	</servlet-mapping>
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/not-found.html</location>
+	</error-page>
+	
+</web-app>
