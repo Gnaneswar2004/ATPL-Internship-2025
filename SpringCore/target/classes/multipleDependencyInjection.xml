@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans
+                               http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="faculty" class="com.aaslin.SpringCore.MultipleDependencyInjection.Faculty">
+		<constructor-arg value="Sujatha."/>
+	</bean>
+	
+    <bean id="library" class="com.aaslin.SpringCore.MultipleDependencyInjection.Library">
+		<property name="book" value="Spring Framework Fundamentals."></property>
+	</bean>
+	
+    <bean id="university" class="com.aaslin.SpringCore.MultipleDependencyInjection.University">
+    	<constructor-arg ref="faculty"/>
+    	<property name="library" ref="library"/>
+    </bean>
+
+</beans>
