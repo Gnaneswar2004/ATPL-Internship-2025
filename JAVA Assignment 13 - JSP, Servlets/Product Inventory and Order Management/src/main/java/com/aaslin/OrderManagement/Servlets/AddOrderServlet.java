@@ -30,10 +30,10 @@ public class AddOrderServlet extends HttpServlet {
 
             Order order = new Order(productId, quantity, customerName, createdBy);
             OrderDAO dao = new OrderDAO();
-            @SuppressWarnings("unused")
+            
 			boolean bool = dao.addOrder(order);
             
-            if (bool = true) {
+            if (bool) {
             	writer.println("<h2>Order Added Successfully!</h2>");
             }
             else {
