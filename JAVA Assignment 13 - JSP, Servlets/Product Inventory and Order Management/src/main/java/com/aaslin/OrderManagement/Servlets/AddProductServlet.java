@@ -30,10 +30,10 @@ public class AddProductServlet extends HttpServlet {
 
             Product product = new Product(name, price, stockQty, createdBy);
             ProductDAO dao = new ProductDAO();
-            @SuppressWarnings("unused")
+            
 			boolean bool = dao.addProduct(product);
             
-            if (bool = true) {
+            if (bool) {
             	writer.println("<h2>Product Added Successfully!</h2>");
             }
             else {
