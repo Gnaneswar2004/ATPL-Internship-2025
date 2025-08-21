@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Orders List</title>
+    <style>
+        table { border-collapse: collapse; width: 80%; margin: 20px 0; }
+        th, td { border: 1px solid #333; padding: 8px; text-align: center; }
+        th { background-color: #f2f2f2; }
+        a.button {
+            padding: 5px 10px;
+            text-decoration: none;
+            color: white;
+            border-radius: 4px;
+        }
+        a.edit { background-color: #4CAF50; }
+        a.cancel { background-color: #f44336; }
+        a.edit:hover { background-color: #45a049; }
+        a.cancel:hover { background-color: #da190b; }
+    </style>
+</head>
+<body>
+<h2>Orders</h2>
+
+<table>
+    <tr>
+        <th>Order ID</th>
+        <th>Customer</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Actions</th>
+    </tr>
+    <tr th:each="o : ${orders}">
+        <td th:text="${o.id}"></td>
+        <td th:text="${o.customerName}"></td>
+        <td th:text="${o.productId}"></td>
+        <td th:text="${o.quantity}"></td>
+        <td>
+            <a th:href="@{/orders/{id}/update(id=${o.id})}" class="button edit">Edit</a>
+            <form th:action="@{/orders/{id}/cancel(id=${o.id})}" method="post" style="display:inline;">
+                <button type="submit" class="button cancel">Cancel</button>
+            </form>
+        </td>
+    </tr>
+</table>
+
+<a th:href="@{/}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Order</title>
+</head>
+<body>
+<h2>Add New Order</h2>
+
+<form th:action="@{/orders/add}" method="post" th:object="${order}">
+    <label>Customer Name:</label>
+    <input type="text" th:field="*{customerName}" required/><br/>
+
+    <label>Product ID:</label>
+    <input type="number" th:field="*{productId}" required/><br/>
+
+    <label>Quantity:</label>
+    <input type="number" th:field="*{quantity}" min="1" required/><br/>
+
+    <button type="submit">Add Order</button>
+</form>
+
+<hr/>
+<h3>Products List</h3>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </tr>
+    <tr th:each="p : ${products}">
+        <td th:text="${p.id}"></td>
+        <td th:text="${p.name}"></td>
+        <td th:text="${p.price}"></td>
+        <td th:text="${p.stock}"></td>
+    </tr>
+</table>
+
+<a th:href="@{/}">Back to Home</a>
+</body>
+</html>
