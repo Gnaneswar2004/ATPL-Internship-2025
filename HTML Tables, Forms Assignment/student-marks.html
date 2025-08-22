@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks</title>
+    <style>
+        table.marks, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Select Student:</label>
+        <select required>
+            <option value = "">select</option>
+            <option value = "Gnani">Gnani</option>
+            <option value = "Sai">Sai</option>
+            <option value = "Prasanth">Prasanth</option>
+            <option value = "Hemanth">Hemanth</option>
+        </select><br><br>
+
+        <table class = "marks">
+            <tr>
+                <th>Subject</th>
+                <th>Marks (out of 100)</th>
+            </tr>
+            <tr>
+                <td>Maths</td>
+                <td>
+                    <input type = "number" placeholder = "Enter the marks" min = "0" max = "100" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td>
+                    <input type = "number" placeholder = "Enter the marks" min = "0" max = "100" required>
+                </td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td>
+                    <input type = "number" placeholder = "Enter the marks" min = "0" max = "100" required>
+                </td>
+            </tr>
+            <tr>
+                <td>History</td>
+                <td>
+                    <input type = "number" placeholder = "Enter the marks" min = "0" max = "100" required>
+                </td>
+            </tr>
+        </table><br>
+        <input type = "submit">
+    </form>
+</body>
+</html>
