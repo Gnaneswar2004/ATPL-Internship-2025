@@ -14,7 +14,17 @@ public class Controller {
 			return "Hello, " + userDetails.getUsername() + "! You are authenticated.";
 		}
 		else {
-			return "Hello, Guest! You are not authenticated.";
+			return "You are not authenticated.";
 		}
+	}
+	
+	@GetMapping("/admin/dashboard")
+	public String dashboard() {
+		return "Welcome to Admin Dashboard!";
+	}
+	
+	@GetMapping("/user/profile")
+	public String profile() {
+		return "Welcome to User Profile!";
 	}
 }
