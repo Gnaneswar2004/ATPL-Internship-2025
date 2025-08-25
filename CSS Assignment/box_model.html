@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a Box Model Visualizer</title>
+    <style>
+        div {
+            color: #505050;
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background: aqua;
+            text-align: center;
+            border: 5px solid black;
+            border-radius: 20px;
+        }
+        .content-box {
+            box-sizing: content-box;
+        }
+        .border-box {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">Content-Box Model</div>
+    <div class="border-box">Border-Box Model</div>
+</body>
+</html>

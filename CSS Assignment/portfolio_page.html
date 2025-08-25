@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Page</title>
+    <style>
+        body {
+            font-family:Arial, sans-serif;
+        }
+        header {
+            padding: 10px;
+            text-align: center;
+            border-bottom: 3px solid grey;
+        }
+        .body {
+            height: 690px;
+            padding: 10px;
+            background-color: #bebebebe;
+        }
+        .info {
+            height: 90px;
+            margin: 10px;
+            padding: 10px;
+            background-color: whitesmoke;
+            border: 2px solid grey;
+            border-radius: 5px;
+        }
+        .projects {
+            height: 230px;
+            margin: 10px;
+            padding: 10px;
+            background-color: whitesmoke;
+            border: 2px solid grey;
+            border-radius: 5px;
+        }
+        .project {
+            width: 48.5%;
+            padding: 10px;
+            display: inline-block;
+            border: 2px solid grey;
+            border-radius: 5px;
+            background-color: #bebebebe;
+        }
+        .contact {
+            height: 270px;
+            margin: 10px;
+            padding: 10px;
+            background-color: whitesmoke;
+            border: 2px solid grey;
+            border-radius: 5px;
+        }
+        form input, form textarea {
+            display: block;
+            width: 97%;
+            margin: 10px 0;
+            padding: 10px;
+        }
+        .footer {
+            padding: 10px;
+            text-align: center;
+            border-top: 3px solid grey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vanapalli Gnaneswara Rao</h1>
+        <h3>Full Stack Developer</h3>
+    </header>
+    <div class="body">
+        <section class="info">
+            <h2>About Me</h2>
+            <p>Hello! I am a Web Developer passionate about design and building projects.</p>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h2>Project 1</h2>
+                <img src="https://via.placeholder.com/150" alt="Project 1">
+                <p>Description of project 1.</p>
+            </div>
+            <div class="project">
+                <h2>Project 2</h2>
+                <img src="https://via.placeholder.com/150" alt="Project 2">
+                <p>Description of project 2.</p>
+            </div>
+        </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <p>Email: example@gmail.com</p>
+            <p>Phone: 1234567890</p>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </div>
+    <footer class="footer">
+        <p>@ 2025 Gnaneswar</p>
+    </footer>
+</body>
+</html>
