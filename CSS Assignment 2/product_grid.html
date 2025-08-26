@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid with Highlighted Feature</title>
+    <style>
+        .products {
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: #80808020;
+            gap: 10px;
+        }
+        .product {
+            padding: 20px;
+            text-align: center;
+            background-color: #80808050;
+        }
+        .product:first-child {
+            grid-column: span 2;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div class="products">
+        <div class="product">Featured Item</div>
+        <div class="product">Item 1</div>
+        <div class="product">Item 2</div>
+        <div class="product">Item 3</div>
+        <div class="product">Item 4</div>
+    </div>
+</body>
+</html>

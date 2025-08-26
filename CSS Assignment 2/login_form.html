@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Login Form with Flexbox</title>
+    <style>
+        body,html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-container {
+            padding: 20px;
+            text-align: center;
+            background: #bebebe;
+            border: 2px solid #646464;
+            border-radius: 10px;
+            box-shadow: 20px 20px 20px #969696;
+        }
+        .login-container input {
+            margin: 10px;
+            padding: 10px;
+            display: block;
+        }
+        .login-container button {
+            padding:10px;
+            color: aliceblue;
+            background: #0064c8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <form>
+            <h3>Login</h3>
+            <input type="text" placeholder="Username" name="Username">
+            <input type="text" placeholder="Password" name="Password">
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+</body>
+</html>

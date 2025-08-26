@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plan Section with Grid</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            background-color: #80808050;
+            gap: 30px;
+        }
+        .plan {
+            margin: 30px 50px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 20px 20px 20px grey;
+        }
+        p {
+            color: #008cff;
+        }
+        button {
+            padding: 10px;
+            color: aliceblue;
+            background-color: #008cff;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="plans">
+        <div class="plan">
+            <h3>Basic</h3>
+            <p><b>$19</b>/month</p>
+            <button>Choose Plan</button>
+        </div>
+        <div class="plan">
+            <h3>Standard</h3>
+            <p><b>$39</b>/month</p>
+            <button>Choose Plan</button>
+        </div>
+        <div class="plan">
+            <h3>Premium</h3>
+            <p><b>$79</b>/month</p>
+            <button>Choose Plan</button>
+        </div>
+    </div>
+</body>
+</html>
