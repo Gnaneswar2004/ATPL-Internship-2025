@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App (No API Key)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f9ff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #333;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 6px;
+      background: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 250px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Weather App</h2>
+  <input type="text" id="city" placeholder="Enter city">
+  <button onclick="getWeather()">Get Weather</button>
+  <div id="result"></div>
+
+  <script>
+    async function getWeather() {
+      const city = document.getElementById('city').value.trim();
+      if (!city) {
+        document.getElementById('result').innerText = "Enter a city name.";
+        return;
+      }
+      try {
+        const res = await fetch(`https://wttr.in/${city}?format=j1`);
+        const data = await res.json();
+        const current = data.current_condition[0];
+        document.getElementById('result').innerHTML =
+          `<strong>${city}</strong><br>
+           Temp: ${current.temp_C} °C<br>
+           Humidity: ${current.humidity}%<br>
+           Condition: ${current.weatherDesc[0].value}`;
+      } catch {
+        document.getElementById('result').innerText = "Error fetching weather.";
+      }
+    }
+  </script>
+</body>
+</html>

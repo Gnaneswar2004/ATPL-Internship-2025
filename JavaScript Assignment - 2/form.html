@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 300px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #4f46e5;
+      color: white;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    #error {
+      margin-top: 10px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <form id="form">
+    <h2>Register</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <input type="password" id="confirm" placeholder="Confirm Password">
+    <button type="submit">Register</button>
+    <p id="error" style="color:red;"></p>
+  </form>
+
+  <script>
+    const form = document.getElementById('form');
+    const error = document.getElementById('error');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pass = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+
+      if (!name || !email || !pass || !confirm) {
+        error.innerText = "All fields are required.";
+        error.style.color = "red";
+        return;
+      }
+      if (!emailRegex.test(email)) {
+        error.innerText = "Invalid email format.";
+        error.style.color = "red";
+        return;
+      }
+      if (pass.length < 6) {
+        error.innerText = "Password must be at least 6 characters.";
+        error.style.color = "red";
+        return;
+      }
+      if (pass !== confirm) {
+        error.innerText = "Passwords do not match.";
+        error.style.color = "red";
+        return;
+      }
+      error.style.color = "green";
+      error.innerText = "Registration successful!";
+      form.reset();
+    });
+  </script>
+</body>
+</html>
