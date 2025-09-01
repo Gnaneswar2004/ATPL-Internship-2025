@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grade Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .calculator {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+    input {
+      width: 80px;
+      padding: 6px;
+      margin: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 15px;
+      margin-top: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #result {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h2>Grade Calculator</h2>
+    <input type="number" id="sub1" placeholder="Subject 1"><br>
+    <input type="number" id="sub2" placeholder="Subject 2"><br>
+    <input type="number" id="sub3" placeholder="Subject 3"><br>
+    <input type="number" id="sub4" placeholder="Subject 4"><br>
+    <input type="number" id="sub5" placeholder="Subject 5"><br>
+    
+    <button onclick="calculateGrade()">Calculate</button>
+    <p id="result"></p>
+  </div>
+
+  <script>
+    function calculateGrade() {
+      let marks = [];
+      for (let i = 1; i <= 5; i++) {
+        let value = parseFloat(document.getElementById("sub" + i).value);
+        if (isNaN(value)) {
+          alert("⚠️ Please enter all marks!");
+          return;
+        }
+        marks.push(value);
+      }
+
+      let total = marks.reduce((a, b) => a + b, 0);
+      let average = total / marks.length;
+      let grade = "";
+      let color = "";
+
+      if (average >= 90) {
+        grade = "A";
+        color = "green";
+      } else if (average >= 75) {
+        grade = "B";
+        color = "green";
+      } else if (average >= 60) {
+        grade = "C";
+        color = "green";
+      } else if (average >= 40) {
+        grade = "D";
+        color = "green";
+      } else {
+        grade = "F";
+        color = "red";
+      }
+      document.getElementById("result").innerHTML = `Total: ${total} <br> Average: ${average.toFixed(2)} <br> Grade: <span style="color:${color}">${grade}</span>`;
+    }
+  </script>
+</body>
+</html>

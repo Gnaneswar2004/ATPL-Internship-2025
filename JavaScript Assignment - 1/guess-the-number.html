@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guess the Number Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .game {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+      width: 300px;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+      margin: 10px 0;
+      width: 150px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #007BFF;
+      color: white;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #feedback {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="game">
+    <h2>Guess the Number 🎲</h2>
+    <p>I'm thinking of a number between <b>1 and 100</b>.</p>
+    <input type="number" id="guess" placeholder="Enter guess">
+    <br>
+    <button onclick="checkGuess()">Submit Guess</button>
+    <p id="feedback"></p>
+  </div>
+
+  <script>
+    let randomNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      let guess = parseInt(document.getElementById("guess").value);
+      if (isNaN(guess) || guess < 1 || guess > 100) {
+        alert("⚠️ Please enter a number between 1 and 100!");
+        return;
+      }
+      
+      attempts++;
+      let feedback = "";
+
+      if (guess === randomNumber) {
+        feedback = `🎉 Correct! The number was ${randomNumber}. You guessed it in ${attempts} attempts.`;
+        document.getElementById("feedback").style.color = "green";
+      } else if (guess < randomNumber) {
+        feedback = "📉 Too low! Try again.";
+        document.getElementById("feedback").style.color = "red";
+      } else {
+        feedback = "📈 Too high! Try again.";
+        document.getElementById("feedback").style.color = "red";
+      }
+
+      document.getElementById("feedback").innerText = feedback;
+    }
+  </script>
+</body>
+</html>
